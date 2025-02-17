@@ -1,0 +1,32 @@
+# intro-to-java-programming
+import java.util.Scanner;
+public class cw317 
+{
+
+    public static void main(String[] args) 
+    { 
+        // variables 
+        //create the scanner variable that holds input 
+        Scanner keyboard = new Scanner(System.in) ;
+        double num1, num2, num3, average;
+        //final double TAX = .01; //defines constant
+
+        //input
+        System.out.println("Enter number one: ");
+        num1 = keyboard.nextDouble();
+        System.out.println("Enter number two: ");
+        num2 = keyboard.nextDouble();
+        System.out.println("Enter number three: ");
+        num3 = keyboard.nextDouble();
+        
+        //calculations 
+        average = (num1 + num2 + num3)/3;
+
+        //output 
+        System.out.println("The arverage is " + average);
+        //keyboard.close();
+
+
+
+    }
+}
