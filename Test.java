@@ -1,5 +1,6 @@
 
 import java.io.*;
+import java.util.Scanner;
 
 // By implementing Serializable interface
 // we make sure that state of instances of class DogStepTracker
@@ -24,7 +25,26 @@ class DogStepTracker implements Serializable {
 
 public class Test {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        DogStepTracker tracker = new DogStepTracker(5000, "Buddy" , "Bob" , "Pit");
+        DogStepTracker tracker = new DogStepTracker( 5500,"Tod","Bob" , "Pit");
+        Scanner Scanner = new Scanner(System.in);
+
+        System.out.println("Enter the number of steps: ");
+        int steps = Scanner.nextInt();
+        Scanner.nextLine();
+        
+        System.out.println("Enter the dogs name: ");
+        String dogName = Scanner.next();
+        Scanner.nextLine();
+
+        System.out.println("Enter the number of breed: ");
+        String breed = Scanner.next();
+        Scanner.nextLine();
+
+        System.out.println("Enter the number of owner: ");
+        String owner = Scanner.next();
+        Scanner.nextLine();
+
+        
 
         // Serializing 'tracker'
         FileOutputStream fos = new FileOutputStream("dog_tracker.txt");
@@ -36,9 +56,9 @@ public class Test {
         ObjectInputStream ois = new ObjectInputStream(fis);
         DogStepTracker deserializedTracker = (DogStepTracker) ois.readObject(); // down-casting object
 
-        System.out.println("Dog Name: " + deserializedTracker.dogName + ", Steps: " + deserializedTracker.steps);
-        System.out.println("owner: " + deserializedTracker.owner);
-        System.out.println("Breed: " + deserializedTracker.breed);
+        System.out.println("Dog Name: " + dogName + ", Steps: " + steps);
+        System.out.println("owner: " + owner);
+        System.out.println("Breed: " + breed);
         // closing streams
         oos.close();
         ois.close();
