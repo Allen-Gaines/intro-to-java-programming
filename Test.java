@@ -25,9 +25,9 @@ class DogStepTracker implements Serializable {
 
 public class Test {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        DogStepTracker tracker = new DogStepTracker( 5500,"Tod","Bob" , "Pit");
-        Scanner Scanner = new Scanner(System.in);
 
+        Scanner Scanner = new Scanner(System.in);
+       
         System.out.println("Enter the number of steps: ");
         int steps = Scanner.nextInt();
         Scanner.nextLine();
@@ -43,6 +43,11 @@ public class Test {
         System.out.println("Enter the number of owner: ");
         String owner = Scanner.next();
         Scanner.nextLine();
+
+        Scanner.close();
+        
+        DogStepTracker tracker = new DogStepTracker(steps, dogName, breed, owner);
+        
 
         
 
