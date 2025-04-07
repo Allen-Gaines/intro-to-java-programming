@@ -18,24 +18,35 @@ public class M4H1_GainesAllen {
     public static void main(String[] args) 
     {
         //commision rate structure 
-        int widgetsSold;
-        int returnWidgets;
+        int widgetsSold = 0;
+        int returnWidgets = 0;
         int basesalary = 2000;
         double commRate;
-        
+        int count; 
+        int numofweeks = 4; 
         double WIGITSOLDAMMOUNT = 4.79;
+        String keepgoing = "y"; 
+        int netWidgetsSold = widgetsSold - returnWidgets; 
+        for ( count= 1; count <= numofweeks; count++)
+        { 
+            Scanner sold = new Scanner(System.in);
+            System.out.print("Enter the number of widgets sold: " );
+            widgetsSold = sold.nextInt();
+            
+        }
+        for ( count= 1; count <= numofweeks; count++)
+        {
+            Scanner sold = new Scanner(System.in);
+            System.out.print("Enter the number of returns: ");
+            returnWidgets = sold.nextInt();
 
-        
-        
+       
+        }
        
         
-        Scanner sold = new Scanner(System.in);
-        System.out.print("Enter the number of widgets sold: " );
-        widgetsSold = sold.nextInt();
-        System.out.print("Enter the number of returns: ");
-        returnWidgets = sold.nextInt();
+       
 
-        int netWidgetsSold = widgetsSold - returnWidgets; 
+        
 
 
 
@@ -64,6 +75,12 @@ public class M4H1_GainesAllen {
         System.out.println("commision ammount: " +commAmmount);
         
         System.out.println("monthly salary: " + Monthlysalary);
+
+        while (keepgoing.equals("y"));
+        {
+            System.out.println("thank you for using this program");
+        }
+        
 
     }
 
